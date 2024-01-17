@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Samadhi</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="left">
+        <div class="logo-container">
+            <img src="./img/logo2.png" alt="meditating monk logo" class="logo">
+            <p class="logo">Subscription Samadhi</p>
+        </div>
+        <footer>
+            <p>Photo by <a href="https://unsplash.com/@olianayda">Olga Nayda</a>
+                on <a href="https://unsplash.com/">Unsplash</a></p>
+        </footer>
+    </div>
+    <div class="right">
+        <div class="description">
+            <p>Attain the <strong>blissful</strong> state of samadhi for just $4.99 a month!
+                You know you need something like this in your life.
+            </p>
+            <p>Sign up <em>now</em> for a free trial.</p>
+            <p>You <em>know</em> you  want to.</p>
+        </div>
+        <div class="form-container">
+            <h2>Let's do this!</h2>
+              <div class="form-contents">
+                  <form id="sign-up-form">
+                        <div class="form-rows">
+                            <div class="form-row-1">
+                                <div class="first-name">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" name="first-name" required
+                                    placeholder="Sau"
+                                    pattern="[A-Za-z]+">
+                                    <span></span>
+                                </div>
+                                <div class="email">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required
+                                    placeholder="example@example.com"
+                                    pattern="[A-Za-z0-9._+-]+@+[A-Za-z0-9-]+\.[a-z]{2,}">
+                                    <span></span>
+                                </div>
+                                <div class="pw">
+                                    <label for="pw">Password</label>
+                                    <input type="password" id="pw" name="pw" required
+                                    pattern="[A-Za-z0-9!#$%&]{8,}"
+                                    title="Must be at least 8 characters"
+                                    placeholder="********">
+                                    <span></span>
+                                    <p>Please enter at least 8 characters</p>
+                                </div>
+                            </div>
+                            <div class="form-row-2">
+                                <div class="last-name">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" name="last-name" required
+                                    placeholder="Hong"
+                                    pattern="[A-Za-z]+">
+                                    <span></span>
+                                </div>
+                                <div class="tel">
+                                    <label for="tel">Phone Number</label>
+                                    <input type="tel" id="tel" name="tel" required
+                                    pattern="[0-9]{7,}"
+                                    title="Please only enter numbers"
+                                    placeholder="01234567">
+                                    <span></span>
+                                    <p>Please only enter numbers</p>
+                                </div>
+                                <div class="confirm-pw">
+                                    <label for="confirm-pw">Confirm Password</label>
+                                    <input type="password" id="confirm-pw" name="confirm-pw" required
+                                    pattern="[A-Za-z0-9!#$%&]{8,}"
+                                    title="Must be at least 8 characters"
+                                    placeholder="********">
+                                    <span></span>
+                                    <p>Please enter at least 8 characters</p>
+                                </div>
+                            </div>
+                        </div>
+                  </form>
+              </div>
+        </div>
+        <div class="submit">
+            <button type="submit" form="sign-up-form">Sign Up!</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+:root {
+    --lotus: rgb(219, 135, 212);
+    --leaf:rgba(135, 219, 142, 1);
+    --transparent-leaf: rgba(135, 219, 142, 0.1);
+}
+
+@font-face {
+    font-family: samadhi;
+    src: url(./font/HERVIA.ttf);
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+    font-family: samadhi;
+    vertical-align: top;
+    background-image: url(./img/bg3.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container {
+    width: 45%;
+    background-color: var(--transparent-leaf);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+
+    position: absolute;
+    top: 2.5rem;
+
+    transition: 3s;
+
+    box-shadow: inset 0rem 0rem 1rem var(--lotus);
+}
+
+.logo-container:hover {
+    box-shadow: inset 0rem 0rem 3rem var(--lotus);
+}
+
+img.logo {
+    width: 10rem;
+    height: 10rem;
+}
+
+p.logo {
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    color: var(--leaf);
+    font-size: 1.1rem;
+}
+
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.description {
+    height: 25%;
+    width: 100%;
+    padding: 3rem;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background-color: black;
+    color: white;
+
+    font-size: 1.6rem;
+    
+}
+
+.description > p {
+    margin-bottom: 1rem;
+}
+
+strong {
+    color: var(--lotus);
+    font-weight:600;
+}
+
+.form-container {
+    width: 100%;
+    height: 50%;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    transition: 0.5s
+}
+
+.form-contents {
+    width: 100%;
+    height:70%;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.form-rows {
+    display: flex;
+    justify-content: center;
+}
+
+.form-row-1 > div,
+.form-row-2 > div {
+    margin: 2rem;
+}
+
+label {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem
+}
+
+input {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    background: none;
+    color: white;
+    transition: 0.2s;
+}
+
+span + p {
+    margin-top: 0.5rem;
+}
+
+.submit {
+    width: 100%;
+    height: 25%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    background-color: black;
+    color: white;
+
+}
+
+button {
+    height: 3rem;
+    width: 10rem;
+    border: none;
+    font-size: 1.3rem;
+    background-color: var(--lotus);
+    color: white;
+    border-radius: 1rem;
+    transition: 0.5s;
+    margin-bottom: 2rem;
+    margin-left: 5rem;
+    margin-top: 2.5rem;
+}
+
+.submit p {
+    margin-left: 5rem;
+}
+
+button:hover {
+    box-shadow: 0rem 0rem 5rem var(--lotus);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+input:required {
+    box-shadow: 0rem 0rem 1rem var(--lotus)
+}
+
+input:valid {
+    box-shadow: 0rem 0rem 1.5rem var(--leaf)
+}
+
+input + span {
+    position: relative;
+}
+
+input + span::after {
+    position: absolute;
+    right: -25px;
+    top: 0px;
+}
+
+input:invalid + span::after {
+    content: '✖';
+    color: var(--lotus);
+}
+
+input:valid + span::after {
+    content: '✓';
+    color: var(--leaf)
+}
